@@ -1,0 +1,60 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today's Summary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView android:id="@+id/tvSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0 Steps"
+            android:textSize="18sp"/>
+
+        <ProgressBar android:id="@+id/pbSteps"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+        <TextView android:id="@+id/tvCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0 Calories"
+            android:textSize="18sp"/>
+
+        <ProgressBar android:id="@+id/pbCalories"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+        <TextView android:id="@+id/tvWorkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0 Min"
+            android:textSize="18sp"/>
+
+        <ProgressBar android:id="@+id/pbWorkout"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>
