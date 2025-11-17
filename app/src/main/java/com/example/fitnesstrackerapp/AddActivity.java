@@ -1,6 +1,7 @@
 package com.example.fitnesstrackerapp;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -62,7 +63,9 @@ public class AddActivity extends AppCompatActivity {
         boolean inserted = db.insertData(date, steps, calories, workout);
         if (inserted) {
             Toast.makeText(this, "Data Added Successfully!", Toast.LENGTH_SHORT).show();
-            finish();
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+
         } else {
             Toast.makeText(this, "Insert Failed!", Toast.LENGTH_SHORT).show();
         }

@@ -3,10 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#F5F5F5">
+    android:background="@drawable/bg_gradient">
 
     <LinearLayout
         android:orientation="vertical"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -14,7 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Today's Summary"
-            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:layout_marginBottom="24dp"/>
 
@@ -22,34 +24,44 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="0 Steps"
-            android:textSize="18sp"/>
+            android:textSize="25sp"/>
 
-        <ProgressBar android:id="@+id/pbSteps"
+        <ProgressBar
+            android:id="@+id/pbSteps"
             android:layout_width="match_parent"
             android:layout_height="16dp"
-            style="@android:style/Widget.ProgressBar.Horizontal"/>
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressTint="@color/purple_500"
+            android:backgroundTint="#808080" />
+
 
         <TextView android:id="@+id/tvCalories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="0 Calories"
-            android:textSize="18sp"/>
+            android:textSize="25sp"/>
 
-        <ProgressBar android:id="@+id/pbCalories"
+        <ProgressBar
+            android:id="@+id/pbCalories"
             android:layout_width="match_parent"
             android:layout_height="16dp"
-            style="@android:style/Widget.ProgressBar.Horizontal"/>
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressTint="@color/purple_500"
+            android:backgroundTint="#808080" />
 
         <TextView android:id="@+id/tvWorkout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="0 Min"
-            android:textSize="18sp"/>
+            android:textSize="25sp"/>
 
-        <ProgressBar android:id="@+id/pbWorkout"
+        <ProgressBar
+            android:id="@+id/pbWorkout"
             android:layout_width="match_parent"
             android:layout_height="16dp"
-            style="@android:style/Widget.ProgressBar.Horizontal"/>
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressTint="@color/purple_500"
+            android:backgroundTint="#808080" />
 
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/barChart"
